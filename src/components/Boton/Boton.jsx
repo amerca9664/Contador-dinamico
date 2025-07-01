@@ -1,5 +1,11 @@
-const Boton = ({ setValue, action, children }) => {
-	return <button onClick={() => action(1, setValue)}>{children}</button>;
+const Boton = ({ botonType, setValue, action, children }) => {
+	if (botonType === 'step') {
+		return <button onClick={() => action(setValue)}>{children}</button>;
+	}
+
+	if (botonType === 'count') {
+		return <button onClick={() => action(setValue)}>{children}</button>;
+	}
 };
 
 export default Boton;
