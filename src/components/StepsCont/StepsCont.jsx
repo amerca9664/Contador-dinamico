@@ -10,7 +10,12 @@ const StepsCont = ({ valNumSteps, setNumSteps }) => {
 				<Boton botonType='step' setValue={setNumSteps} action={incSteps}>
 					+{valNumSteps}
 				</Boton>
-				<Boton botonType='step' setValue={setNumSteps} action={resetIncCounter}>
+				<Boton
+					valNumSteps={valNumSteps}
+					botonType='step'
+					setValue={setNumSteps}
+					action={resetIncCounter}
+				>
 					Reset increment
 				</Boton>
 			</div>

@@ -7,10 +7,20 @@ const CounterCont = ({ valCounter, setCounter, valNumSteps }) => {
 		<>
 			<TextLbl>{valCounter}</TextLbl>
 			<div>
-				<Boton botonType='count' setValue={setCounter} action={decremento}>
+				<Boton
+					valCounter={valCounter}
+					botonType='count'
+					setValue={setCounter}
+					action={decremento}
+				>
 					-{valNumSteps}
 				</Boton>
-				<Boton botonType='count' setValue={setCounter} action={resetCounter}>
+				<Boton
+					valCounter={valCounter}
+					botonType='count'
+					setValue={setCounter}
+					action={resetCounter}
+				>
 					Reset
 				</Boton>
 				<Boton botonType='count' setValue={setCounter} action={incremento}>

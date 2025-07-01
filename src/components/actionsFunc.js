@@ -9,7 +9,11 @@ const incremento = (setValue) => {
 
 const decremento = (setValue) => {
 	counter = counter - numSteps;
-	setValue(counter);
+    if (counter <= 0){
+        counter =0;
+    }
+
+	setValue(counter)
 };
 
 const resetCounter = (setValue) => {

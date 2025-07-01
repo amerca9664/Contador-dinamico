@@ -1,10 +1,27 @@
-const Boton = ({ botonType, setValue, action, children }) => {
+const Boton = ({
+	valCounter,
+	valNumSteps,
+	botonType,
+	setValue,
+	action,
+	children
+}) => {
 	if (botonType === 'step') {
-		return <button onClick={() => action(setValue)}>{children}</button>;
+		const disabStep = valNumSteps === 1 ? true : false;
+		return (
+			<button onClick={() => action(setValue)} disabled={disabStep}>
+				{children}
+			</button>
+		);
 	}
 
 	if (botonType === 'count') {
-		return <button onClick={() => action(setValue)}>{children}</button>;
+		const disab = valCounter <= 0 ? true : false;
+		return (
+			<button onClick={() => action(setValue)} disabled={disab}>
+				{children}
+			</button>
+		);
 	}
 };
 
