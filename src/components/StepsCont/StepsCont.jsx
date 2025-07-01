@@ -3,16 +3,16 @@ import Boton from '../Boton/Boton';
 import TextLbl from '../TextLbl/TextLbl';
 
 const StepsCont = ({ valNumSteps, setNumSteps }) => {
+	const disabStep = valNumSteps === 1 ? true : false;
 	return (
 		<>
 			<TextLbl>{valNumSteps}</TextLbl>
 			<div>
-				<Boton botonType='step' setValue={setNumSteps} action={incSteps}>
+				<Boton disabledSta={false} setValue={setNumSteps} action={incSteps}>
 					+{valNumSteps}
 				</Boton>
 				<Boton
-					valNumSteps={valNumSteps}
-					botonType='step'
+					disabledSta={disabStep}
 					setValue={setNumSteps}
 					action={resetIncCounter}
 				>

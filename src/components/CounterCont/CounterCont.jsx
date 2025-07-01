@@ -3,27 +3,26 @@ import TextLbl from '../TextLbl/TextLbl';
 import Boton from '../Boton/Boton';
 
 const CounterCont = ({ valCounter, setCounter, valNumSteps }) => {
+	const disabStep = valCounter <= 0 ? true : false;
 	return (
 		<>
 			<TextLbl>{valCounter}</TextLbl>
 			<div>
 				<Boton
-					valCounter={valCounter}
-					botonType='count'
+					disabledSta={disabStep}
 					setValue={setCounter}
 					action={decremento}
 				>
 					-{valNumSteps}
 				</Boton>
 				<Boton
-					valCounter={valCounter}
-					botonType='count'
+					disabledSta={disabStep}
 					setValue={setCounter}
 					action={resetCounter}
 				>
 					Reset
 				</Boton>
-				<Boton botonType='count' setValue={setCounter} action={incremento}>
+				<Boton disabledSta={false} setValue={setCounter} action={incremento}>
 					+{valNumSteps}
 				</Boton>
 			</div>
