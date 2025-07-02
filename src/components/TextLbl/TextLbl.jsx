@@ -1,5 +1,7 @@
-const TextLbl = ({ children }) => {
-	return <span>{children}</span>;
+import { StyledSpan } from './textLbl.styles';
+
+const TextLbl = ({ color, children }) => {
+	return <StyledSpan $color={color}>{children}</StyledSpan>;
 };
 
 export default TextLbl;

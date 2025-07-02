@@ -4,9 +4,11 @@ import Boton from '../Boton/Boton';
 
 const CounterCont = ({ valCounter, setCounter, valNumSteps }) => {
 	const disabStep = valCounter <= 0 ? true : false;
+	const isEven = valCounter % 2 === 0 ? true : false;
+	const ChangeColor = isEven && !disabStep ? 'red' : 'black';
 	return (
 		<>
-			<TextLbl>{valCounter}</TextLbl>
+			<TextLbl color={ChangeColor}>{valCounter}</TextLbl>
 			<div>
 				<Boton
 					disabledSta={disabStep}

@@ -6,7 +6,7 @@ const StepsCont = ({ valNumSteps, setNumSteps }) => {
 	const disabStep = valNumSteps === 1 ? true : false;
 	return (
 		<>
-			<TextLbl>{valNumSteps}</TextLbl>
+			<TextLbl color='black'>{valNumSteps}</TextLbl>
 			<div>
 				<Boton disabledSta={false} setValue={setNumSteps} action={incSteps}>
 					+{valNumSteps}
